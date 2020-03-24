@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Header from './containers/Header'
 import Body from './containers/Body'
 
 function App() {
+
+  const [results, setResults] = useState([])
+  console.log(results)
 
   const handleSubmit = (year, days) => {
     fetch('http://localhost:3000/years', {
@@ -15,14 +18,14 @@ function App() {
       body: JSON.stringify({year: {year: year, pto: days}})
     })
     .then(resp => resp.json())
-    .then(json => console.log(json.result))
+    .then(json => setResults(json.result))
   }
 
   return (
     <div className="App">
       Test
       <Header handleSubmit={handleSubmit}/>
-      <Body />
+      <Body results={results}/>
     </div>
   );
 }

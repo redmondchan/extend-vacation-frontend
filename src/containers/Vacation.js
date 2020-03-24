@@ -2,6 +2,7 @@ import React from 'react';
 import Calendar from '../components/Calendar'
 
 function Vacation(props){
+  console.log("test", props)
     const duration = props.result.split(" - ")
     const start = duration[0].split("/")
     const end = duration[1].split("/")
