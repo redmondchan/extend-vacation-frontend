@@ -25,7 +25,7 @@ function Form() {
       body: JSON.stringify({year: {year: year, pto: days}})
     })
     .then(resp => resp.json())
-    .then(json => console.log(json))
+    .then(json => console.log(json.result))
   }
 
   return (

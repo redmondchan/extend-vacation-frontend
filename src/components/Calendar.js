@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import CalendarRow from './CalendarRow';
 
-function Calendar() {
+function Calendar(props) {
     // const rows = [1,2,3,4]
     // array of objects
 
-    const start = {month: 2, day: 2, year: 2020}
+    const date = props.date
 
-    const numOfDays = 32 - new Date(start["year"], start["month"] - 1, 32).getDate()
+    const numOfDays = 32 - new Date(date["year"], date["month"] - 1, 32).getDate()
 
-    const startOfMonth = new Date(start["year"], start["month"] - 1).getDay()
+    const startOfMonth = new Date(date["year"], date["month"] - 1).getDay()
 
     const array = []
 
