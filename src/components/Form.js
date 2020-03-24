@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function Form() {
+function Form(props) {
   const[year, setYear] = useState(new Date().getFullYear())
   const[days, setDays] = useState(0)
   const options = []
@@ -16,16 +16,17 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(JSON.stringify({year: year, pto: days}))
-    fetch('http://localhost:3000/years', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify({year: {year: year, pto: days}})
-    })
-    .then(resp => resp.json())
-    .then(json => console.log(json.result))
+    props.handleSubmit(year, days)
+    // fetch('http://localhost:3000/years', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'Accept': 'application/json',
+    //   },
+    //   body: JSON.stringify({year: {year: year, pto: days}})
+    // })
+    // .then(resp => resp.json())
+    // .then(json => console.log(json.result))
   }
 
   return (
