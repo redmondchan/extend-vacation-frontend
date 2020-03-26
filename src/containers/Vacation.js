@@ -12,15 +12,15 @@ function Vacation(props){
 
     if (startObject.month == endObject.month){
       return(
-        <div>
-          <Calendar date = {startObject} duration = {vacation}/>
+        <div className="calendar-container">
+          <Calendar date = {startObject} vacation = {vacation}/>
         </div>
       )
     }
     return(
-        <div>
-          <Calendar date = {startObject} duration = {vacation}/>
-          <Calendar date = {endObject} duration = {vacation}/>
+        <div className="calendar-container">
+          <Calendar date = {startObject} vacation = {vacation}/>
+          <Calendar date = {endObject} vacation = {vacation}/>
         </div>
       )
 }

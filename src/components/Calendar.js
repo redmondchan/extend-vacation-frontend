@@ -31,11 +31,14 @@ function Calendar(props) {
 
     const rows = []
     for(let i = 0; i < newArray.length; i++){
-      rows.push(<CalendarRow row={newArray[i]}/>)
+      rows.push(<CalendarRow row={newArray[i]}  vacation={props.vacation} date={props.date}/>)
     }
-
+    const monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   return (
-    <table>
+    <table className="calendar">
+      <tr>
+        <th>{monthArray[date.month-1]}</th>
+      </tr>
       <tr>
         <th>Sun</th>
         <th>Mon</th>

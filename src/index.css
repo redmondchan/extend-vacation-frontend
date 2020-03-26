@@ -5,3 +5,14 @@ body {
   background-color: red;
   height: 75vh;
 }
+
+.calendar-container {
+  width: 100%;
+}
+.calendar {
+  display: inline-block;
+}
+
+.highlighted {
+  background-color: red;
+}
