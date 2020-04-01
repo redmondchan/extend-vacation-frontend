@@ -23,7 +23,6 @@ function App() {
 
   return (
     <div className="App">
-      Test
       <Header handleSubmit={handleSubmit}/>
       <Body results={results}/>
     </div>

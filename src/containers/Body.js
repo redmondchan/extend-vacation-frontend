@@ -7,7 +7,6 @@ function Body(props) {
 
     return(
       <div className="body">
-        Body
         {props.results.map(result => <Vacation result={result.result} />)}
       </div>
     )
