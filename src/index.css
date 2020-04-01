@@ -1,9 +1,13 @@
 body {
+  width: 100vw;
 }
 
 .header {
-  background-color: red;
+  background-color: #468261;;
   height: 75vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .calendar-container {

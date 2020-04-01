@@ -37,7 +37,7 @@ function Calendar(props) {
   return (
     <table className="calendar">
       <tr>
-        <th>{monthArray[date.month-1]}</th>
+        <th>{monthArray[date.month-1] props.date.year}</th>
       </tr>
       <tr>
         <th>Sun</th>
