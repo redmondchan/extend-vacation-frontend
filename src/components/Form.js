@@ -1,4 +1,7 @@
 import React, {useState} from 'react';
+import BootForm from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
 
 function Form(props) {
   const[year, setYear] = useState(new Date().getFullYear())
@@ -30,6 +33,7 @@ function Form(props) {
   }
 
   return (
+    <div>
     <form onSubmit={handleSubmit}>
 
       <label> Year: </label>
@@ -45,7 +49,28 @@ function Form(props) {
         </select>
 
       <button> Submit </button>
+
     </form>
+    <BootForm onSubmit={handleSubmit}>
+      <BootForm.Group controlId="year">
+        <BootForm.Label>Year:</BootForm.Label>
+        <BootForm.Control as="select" custom onChange={e => setYear(parseInt(e.target.value))}>
+          <option selected>{new Date().getFullYear()}</option>
+          <option>{new Date().getFullYear() + 1}</option>
+          <option>{new Date().getFullYear() + 2}</option>
+        </BootForm.Control>
+      </BootForm.Group>
+
+      <BootForm.Group controlId="pto">
+        <BootForm.Label>PTO:</BootForm.Label>
+        <BootForm.Control as="select" custom onChange={e => setDays(parseInt(e.target.value))}>
+          {options}
+        </BootForm.Control>
+      </BootForm.Group>
+
+      <Button variant="primary" type="submit">Submit</Button>
+    </BootForm>
+    </div>
   )
 }
 
