@@ -33,28 +33,11 @@ function Form(props) {
   }
 
   return (
-    <div>
-    <form onSubmit={handleSubmit}>
-
-      <label> Year: </label>
-        <select onChange={e => setYear(parseInt(e.target.value))}>
-          <option selected>{new Date().getFullYear()}</option>
-          <option>{new Date().getFullYear() + 1}</option>
-          <option>{new Date().getFullYear() + 2}</option>
-        </select>
-
-      <label> # of PTO: </label>
-        <select onChange={e => setDays(parseInt(e.target.value))}>
-          {options}
-        </select>
-
-      <button> Submit </button>
-
-    </form>
+    <div className="text--med">
     <BootForm onSubmit={handleSubmit}>
       <BootForm.Group controlId="year">
         <BootForm.Label>Year:</BootForm.Label>
-        <BootForm.Control as="select" custom onChange={e => setYear(parseInt(e.target.value))}>
+        <BootForm.Control as="select" size="lg" onChange={e => setYear(parseInt(e.target.value))}>
           <option selected>{new Date().getFullYear()}</option>
           <option>{new Date().getFullYear() + 1}</option>
           <option>{new Date().getFullYear() + 2}</option>
@@ -63,12 +46,12 @@ function Form(props) {
 
       <BootForm.Group controlId="pto">
         <BootForm.Label>PTO:</BootForm.Label>
-        <BootForm.Control as="select" custom onChange={e => setDays(parseInt(e.target.value))}>
+        <BootForm.Control as="select" size="lg" onChange={e => setDays(parseInt(e.target.value))}>
           {options}
         </BootForm.Control>
       </BootForm.Group>
 
-      <Button variant="primary" type="submit">Submit</Button>
+      <Button variant="primary" type="submit" size="lg">Submit</Button>
     </BootForm>
     </div>
   )

@@ -10,6 +10,14 @@ html {
   font-size: 62.5%; /* 10/16 = 62.5%, 1rem = 10px */
 }
 
+.text--large {
+  font-size: 4rem;
+}
+
+.text--med {
+  font-size: 2rem;
+}
+
 .header {
   background-color: #468261;;
   height: 75vh;
@@ -17,6 +25,10 @@ html {
   flex-direction: column;
   justify-content:center;
   align-items:center;
+}
+
+.heading {
+  padding: 2rem;
 }
 
 .calendar-container {
