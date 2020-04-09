@@ -36,20 +36,22 @@ function Calendar(props) {
     const monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   return (
     <table className="calendar">
-      <tr>
-        <th>{`${monthArray[date.month-1]} ${props.date.year}`}</th>
-      </tr>
-      <tr>
-        <th>Sun</th>
-        <th>Mon</th>
-        <th>Tues</th>
-        <th>Wed</th>
-        <th>Thurs</th>
-        <th>Fri</th>
-        <th>Sat</th>
-      </tr>
-      {rows}
-      {console.log(startOfMonth + numOfDays, array, newArray)}
+      <caption className="calendar__month">{`${monthArray[date.month-1]} ${props.date.year}`}</caption>
+      <thead>
+        <tr>
+          <th>S</th>
+          <th>M</th>
+          <th>T</th>
+          <th>W</th>
+          <th>T</th>
+          <th>F</th>
+          <th>S</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows}
+      </tbody>
+          {console.log(startOfMonth + numOfDays, array, newArray)}
     </table>
   )
 }

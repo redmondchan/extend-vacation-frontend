@@ -38,6 +38,11 @@ html {
   display: inline-block;
 }
 
+.calendar__month {
+  text-align: center;
+  caption-side: top;
+}
+
 .highlighted {
   background-color: red;
 }
