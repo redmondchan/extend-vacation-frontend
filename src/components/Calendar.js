@@ -4,6 +4,7 @@ import CalendarRow from './CalendarRow';
 function Calendar(props) {
     // const rows = [1,2,3,4]
     // array of objects
+    console.log(props)
 
     const date = props.date
 

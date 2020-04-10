@@ -33,6 +33,7 @@ html {
 
 .calendar-container {
   width: 100%;
+  font-size: 2rem;
 }
 .calendar {
   display: inline-block;
