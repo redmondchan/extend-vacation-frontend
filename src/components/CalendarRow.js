@@ -15,7 +15,7 @@ function CalendarRow(props) {
     console.log("count:", i)
     if(row[i] == 0){
       console.log(i, "Zero")
-      weeks.push(<td></td>)
+      weeks.push(<td className="calendar__day--empty">0</td>)
     } else if(start.month == date.month && start.month !== end.month){
       console.log(i, "one")
       if(row[i] >= start.day){

@@ -37,11 +37,16 @@ html {
 }
 .calendar {
   display: inline-block;
+  padding: 2rem;
 }
 
 .calendar__month {
   text-align: center;
   caption-side: top;
+}
+
+.calendar__day--empty {
+  color: white;
 }
 
 .highlighted {

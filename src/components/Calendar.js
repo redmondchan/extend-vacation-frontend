@@ -24,6 +24,13 @@ function Calendar(props) {
       }
     }
 
+    if(array.length != 42){
+      console.log(array)
+      for(let i = array.length; i < 42; i++){
+        array.push(0)
+      }
+    }
+
     const newArray = []
     for(let i = 0; i < array.length; i +=7){
       let tempArray = array.slice(i, i+7)
