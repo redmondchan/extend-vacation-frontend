@@ -15,31 +15,31 @@ function CalendarRow(props) {
     console.log("count:", i)
     if(row[i] == 0){
       console.log(i, "Zero")
-      weeks.push(<td className="calendar__day--empty">0</td>)
+      weeks.push(<td className="calendar__day calendar__day--empty ">0</td>)
     } else if(start.month == date.month && start.month !== end.month){
       console.log(i, "one")
       if(row[i] >= start.day){
-        weeks.push(<td className="highlighted">{row[i]}</td>)
+        weeks.push(<td className="calendar__day highlighted">{row[i]}</td>)
       } else {
-        weeks.push(<td>{row[i]}</td>)
+        weeks.push(<td className="calendar__day">{row[i]}</td>)
       }
     } else if(start.month == date.month && start.month == end.month){
       console.log(i, "two", start.day, row[i], end.day)
       if( start.day <= row[i] && row[i] <= end.day ){
-        weeks.push(<td className="highlighted">{row[i]}</td>)
+        weeks.push(<td className="calendar__day highlighted">{row[i]}</td>)
       } else {
-        weeks.push(<td>{row[i]}</td>)
+        weeks.push(<td className="calendar__day">{row[i]}</td>)
       }
     } else if(end.month == date.month){
       console.log(i, "three")
       if(row[i] <= end.day){
-        weeks.push(<td className="highlighted">{row[i]}</td>)
+        weeks.push(<td className="calendar__day highlighted">{row[i]}</td>)
       } else {
-        weeks.push(<td>{row[i]}</td>)
+        weeks.push(<td className="calendar__day">{row[i]}</td>)
       }
     } else if(date.month !== start.month && date.month !== end.month){
       console.log(i, "four")
-        weeks.push(<td className="highlighted">{row[i]}</td>)
+        weeks.push(<td className="calendar__day highlighted">{row[i]}</td>)
     }
   }
   // const weeks = props.row.map(day => {

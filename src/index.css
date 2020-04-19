@@ -44,9 +44,20 @@ html {
   text-align: center;
   caption-side: top;
 }
+.calendar__day {
+  /* width: 14.2857142857%; */
+  width: 4rem;
+  border: .1rem solid white;
+  box-sizing: border-box;
+  padding: .5rem 0rem;
+}
 
 .calendar__day--empty {
   color: white;
+}
+
+.calendar__dayOfWeek {
+  padding: .5rem 0rem;
 }
 
 .highlighted {

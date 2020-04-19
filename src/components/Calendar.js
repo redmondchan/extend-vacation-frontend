@@ -47,13 +47,13 @@ function Calendar(props) {
       <caption className="calendar__month">{`${monthArray[date.month-1]} ${props.date.year}`}</caption>
       <thead>
         <tr>
-          <th>S</th>
-          <th>M</th>
-          <th>T</th>
-          <th>W</th>
-          <th>T</th>
-          <th>F</th>
-          <th>S</th>
+          <th className="calendar__dayOfWeek">S</th>
+          <th className="calendar__dayOfWeek">M</th>
+          <th className="calendar__dayOfWeek">T</th>
+          <th className="calendar__dayOfWeek">W</th>
+          <th className="calendar__dayOfWeek">T</th>
+          <th className="calendar__dayOfWeek">F</th>
+          <th className="calendar__dayOfWeek">S</th>
         </tr>
       </thead>
       <tbody>
