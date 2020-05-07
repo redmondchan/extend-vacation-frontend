@@ -61,5 +61,13 @@ html {
 }
 
 .highlighted {
+  background-color: pink;
+}
+
+.highlighted--start {
+  background-color: red;
+}
+
+.highlighted--end {
   background-color: red;
 }

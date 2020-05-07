@@ -4,7 +4,7 @@ function CalendarRow(props) {
   // for(let i = 0; i < row.length; i++){
   //
   // }
-  console.log(props.vacation.start == props.date)
+  console.log(props)
   const start = props.vacation.start
   const end = props.vacation.end
   const date = props.date
@@ -16,6 +16,10 @@ function CalendarRow(props) {
     if(row[i] == 0){
       console.log(i, "Zero")
       weeks.push(<td className="calendar__day calendar__day--empty ">0</td>)
+    } else if(start.month == date.month && row[i] == start.day){
+      weeks.push(<td className="calendar__day highlighted--start">{row[i]}</td>)
+    } else if(end.month == date.month && row[i] == end.day){
+      weeks.push(<td className="calendar__day highlighted--end">{row[i]}</td>)
     } else if(start.month == date.month && start.month !== end.month){
       console.log(i, "one")
       if(row[i] >= start.day){
